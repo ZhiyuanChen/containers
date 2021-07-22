@@ -15,6 +15,8 @@ RUN conda env update -n base -f /tmp/environment.yml && \
 
 RUN git clone https://github.com/nvidia/apex /tmp/apex && \
     pip install -v --disable-pip-version-check --no-cache-dir \
-    --global-option="--cpp_ext" --global-option="--cuda_ext" /tmp/apex/ && \
+    --global-option="--cpp_ext" --global-option="--cuda_ext" \
+    --global-option="--deprecated_fused_adam" --global-option="--xentropy" \
+    --global-option="--fast_multihead_attn"  /tmp/apex/ && \
     rm -rf /tmp/apex
 
