@@ -20,3 +20,5 @@ RUN git clone https://github.com/nvidia/apex /tmp/apex && \
     --global-option="--fast_multihead_attn"  /tmp/apex/ && \
     rm -rf /tmp/apex
 
+RUN git clone https://github.com/pytorch/fairseq /tmp/fairseq && \
+    pip install -e /tmp/fairseq ** rm -rf /tmp/fairseq
